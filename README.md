@@ -2,17 +2,15 @@
 
 __A simple command line script template for new proyects__
 
-Un simple template de un script de linea de comando para usar en la
-construcción de cualquier nueva herramienta de este tipo. La idea de este
-proyecto es usarlo "out of a box" para construir nuevas herramientas de línea
-de comando.
+Un simple template o modelo de un script de linea de comando para usar en la
+construcción de cualquier nueva herramienta de este tipo.
 
 ### características
 
-* Simple y Estándar
+* Simple y estándar
 * Uso de `setup.py`
-* `progressbar2` como ejemplo de requerimiento externo
-* `pytest` para manejar las pruebas
+* `progressbar2` como ejemplo de requerimiento externo y además por que resulta útil
+* `pytest` para manejar las pruebas unitarias
 
 
 # Instalación y desarrollo
@@ -20,8 +18,8 @@ de comando.
 
 Tener instalado y funcionando:
 
-* Git
-* Python 3.x
+* [Git][git]
+* [Python 3.x][python]
 
 ## Entorno inicial básico
 
@@ -85,6 +83,11 @@ def importlib_load_entry_point(spec, group, name):
     dist_name, _, _ = spec.partition('==')
 ```
 
+Con esto logramos que sea posible ejecutar `cmdline` desde `<root
+path>/cmdline/.venv/bin/python`, dónde `<root path>` será la carpeta base en
+dónde hemos instalado este proyecto, la ejecución usará el interprete `python`
+del entorno virtual, algo fundamental ya que es en este entorno dónde hemos
+instalado los requerimientos de la herramienta.
 
 ## Comenzando un nuevo proyecto
 
@@ -101,3 +104,5 @@ nuevo proyecto a partir de este template serían:
 5. Eliminar repositorio `.git` y generar una nuevo con `git init`
 
 
+[git]: https://git-scm.com/
+[python]: https://www.python.org/
