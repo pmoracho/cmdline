@@ -98,6 +98,7 @@ nuevo proyecto a partir de este template serían:
     * Datos de la herramienta: `NAME`, `DESCRIPTION`, `URL`, `EMAIL`, `AUTHOR`
     * Paquetes requeridos `REQUIRED`
     * Clasificadores para **PyPy**: `setup(..., classifiers)`
+    * `entry_points`, según sea la invocación del código principal del script.
 2. Configuración de versión en `cmdline/__version__.py`
 3. Editar código en `cmdline/core.py`
 4. Renombrar proyecto y carpeta del módulo `cmdline` por el nombre de la nueva herramienta

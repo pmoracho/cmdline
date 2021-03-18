@@ -21,3 +21,7 @@ def main():
         bar.update(i)
 
     bar.finish()
+
+if __name__ == "__main__":
+
+	main()
