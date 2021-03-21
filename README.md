@@ -32,6 +32,7 @@ herramienta.
 * Activar entorno virtual
 * actualizar `pip` y `setuptool`
 * Instalar requerimientos
+* Instalar `pytest`
 
 ```
 git clone https://github.com/pmoracho/cmdline.git
@@ -88,6 +89,24 @@ path>/cmdline/.venv/bin/python`, dónde `<root path>` será la carpeta base en
 dónde hemos instalado este proyecto, la ejecución usará el interprete `python`
 del entorno virtual, algo fundamental ya que es en este entorno dónde hemos
 instalado los requerimientos de la herramienta.
+
+### Testing
+
+Este proyecto implementa una carpeta `test` con una prueba muy simple de una
+función del módulo `core.py`, las pruebas se ejecutan mediante `pytest`, el cual
+se deberá instalar si se elije seguir usando este procedimiento:
+
+```
+pip install pytest
+```
+
+Luego, para ejecutar los tests:
+
+```
+pytest
+```
+
+
 
 ## Comenzando un nuevo proyecto
 
