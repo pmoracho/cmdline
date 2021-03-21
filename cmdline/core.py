@@ -6,6 +6,9 @@ from progressbar import RotatingMarker
 from progressbar import ETA
 import time
 
+def sum_function_to_test(a, b):
+    return a+b
+
 def main():
 
     print("Executing main")
