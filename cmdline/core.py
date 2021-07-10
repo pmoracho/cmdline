@@ -1,10 +1,21 @@
-from progressbar import ProgressBar
-from progressbar import FormatLabel
-from progressbar import Percentage
-from progressbar import Bar
-from progressbar import RotatingMarker
-from progressbar import ETA
-import time
+try:
+    import sys
+    import gettext
+    from gettext import gettext as _
+    gettext.textdomain('cmdline')
+
+    from progressbar import ProgressBar
+    from progressbar import FormatLabel
+    from progressbar import Percentage
+    from progressbar import Bar
+    from progressbar import RotatingMarker
+    from progressbar import ETA
+    import time
+
+except ImportError as err:
+    modulename = err.args[0].partition("'")[-1].rpartition("'")[0]
+    print(_("No fue posible importar el modulo: %s") % modulename)
+    sys.exit(-1)
 
 def sum_function_to_test(a, b):
     return a+b

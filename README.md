@@ -11,6 +11,7 @@ construcción de cualquier nueva herramienta de este tipo.
 * Uso de `setup.py`
 * `progressbar2` como ejemplo de requerimiento externo y además por que resulta útil
 * `pytest` para manejar las pruebas unitarias
+* `docker`izable
 
 
 # Instalación y desarrollo
@@ -60,7 +61,7 @@ python setup.py develop
 ```
 
 Esto genera un script de ejecución consistente entre plataformas que en el caso
-de este template se llamará `cmdline`, el código del mismo
+de este template se llamará `cmdline`. El código del mismo:
 
 ```python
 #!<root path>/cmdline/.venv/bin/python
