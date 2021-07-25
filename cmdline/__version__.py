@@ -1,4 +1,8 @@
+__version__ = (0, 1, 0)
+NAME = 'cmdline'
+DESCRIPTION = 'A commandline program template'
+URL = 'https://github.com/pmoracho/cmdline'
+EMAIL = 'pmoracho@gmail.com'
+AUTHOR = 'Patricio Moracho'
 
-VERSION = (0, 1, 0)
-
-__version__ = '.'.join(map(str, VERSION))
+VERSION = '.'.join(map(str, __version__))

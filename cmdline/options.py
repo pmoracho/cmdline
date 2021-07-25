@@ -3,6 +3,12 @@ from gettext import gettext as _
 
 gettext.textdomain('cmdline')
 
+from cmdline.__version__  import NAME
+from cmdline.__version__  import DESCRIPTION
+from cmdline.__version__  import URL
+from cmdline.__version__  import AUTHOR
+from cmdline.__version__  import VERSION
+
 def _my_gettext(s):
     """Traducir algunas cadenas de argparse."""
     current_dict = {'usage: ': 'uso: ',
@@ -22,58 +28,20 @@ import argparse
 
 def init_argparse():
     """Inicializar parametros del programa."""
-    cmdparser = argparse.ArgumentParser(prog=__appname__,
-                                        description="%s\n%s\n" % (__appdesc__, __copyright__),
+    cmdparser = argparse.ArgumentParser(prog=NAME,
+                                        description="%s\n%s\n" % (DESCRIPTION, AUTHOR),
                                         epilog="",
                                         add_help=True,
                                         formatter_class=make_wide(argparse.HelpFormatter, w=80, h=48)
     )
 
-    opciones = {    "data": {
-                                "type": str,
-                                "nargs": '?',
-                                "action": "store",
-                                 "default": "",
-                                "help": _("Datos a capturar")
+    opciones = {    "commando": {
+                                "help": _("Comando del migrador, export o import")
                     },
                     "--version -v": {
                                 "action":    "version",
-                                "version":    __version__,
+                                "version":    VERSION,
                                 "help":        _("Mostrar el número de versión y salir")
-                    },
-                    "--show-data -s": {
-                                "action":    "store_true",
-                                "dest":        "showdata",
-                                "default":    False,
-                                "help":        _("Mostrar los datos a capturar disponibles")
-                    },
-                    "--output-path -o": {
-                                "type":     str,
-                                "action":   "store",
-                                "dest":     "outputpath",
-                                "default":   ".",
-                                "help":       _("Carpeta de outputh de los datos capturados")
-                    },
-                    "--output-file -f": {
-                                "type":     str,
-                                "action":   "store",
-                                "dest":     "outputfile",
-                                "default":    None,
-                                "help":        _("Nombre del archivo de output de los datos capturados")
-                    },
-                    "--input-file -i": {
-                                "type":     str,
-                                "action":   "store",
-                                "dest":     "inputfile",
-                                "default":   None,
-                                "help":      _("Nombre del archivo de entrada de datos")
-                    },
-                    "--output-type -t": {
-                                "type":     str,
-                                "action":   "store",
-                                "dest":     "outputtype",
-                                "default":  "psql",
-                                "help":     _("Formato de salida")
                     },
                     "--log-level -n": {
                                 "type":     str,
@@ -86,7 +54,7 @@ def init_argparse():
                             "type":	str,
                             "action": "store",
                             "dest":	"logfile",
-                            "default": None,
+                            "default": "",
                             "help":	_("Archivo de log"),
                             "metavar": "file"
                     },
@@ -96,12 +64,7 @@ def init_argparse():
                                 "default":    False,
                                 "help":        _("Modo silencioso sin mostrar absolutamente nada.")
                     },
-                     "--show-browser -b": {
-                                "action":   "store_true",
-                                "dest":     "show_browser",
-                                "default":  False,
-                                "help":     _("Muestra el navegador y la interacción")
-                    },
+
             }
 
     for key, val in opciones.items():

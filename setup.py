@@ -10,17 +10,17 @@ import sys
 from shutil import rmtree
 
 from setuptools import find_packages, setup, Command
-from cmdline.__version__  import __version__
 
 # Package meta-data.
-NAME = 'cmdline'
-DESCRIPTION = 'A command line sample'
-URL = 'https://github.com/pmoracho/cmdline'
-EMAIL = 'pmoracho@gmail.com'
-AUTHOR = 'Patricio Moracho'
+from cmdline.__version__  import __version__
+from cmdline.__version__  import NAME
+from cmdline.__version__  import DESCRIPTION
+from cmdline.__version__  import URL
+from cmdline.__version__  import AUTHOR
+from cmdline.__version__  import EMAIL
+from cmdline.__version__  import VERSION
 
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = __version__
 
 # What packages are required for this module to be executed?
 REQUIRED = [
