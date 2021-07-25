@@ -11,6 +11,8 @@ construcción de cualquier nueva herramienta de este tipo.
 * Uso de `setup.py`
 * `progressbar2` como ejemplo de requerimiento externo y además por que resulta útil
 * `pytest` para manejar las pruebas unitarias
+* Congfiguración tipo `INI`
+* Log con `logging`
 * `docker`izable
 
 
