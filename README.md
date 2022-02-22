@@ -40,7 +40,7 @@ herramienta.
 ```
 git clone https://github.com/pmoracho/cmdline.git
 cd cmdline
-python3 -m venv .venv --prompt=cmdline
+python -m venv .venv --prompt=cmdline
 
 # En Windows
 .venv\Scripts\activate.bat
