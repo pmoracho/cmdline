@@ -84,7 +84,3 @@ def main():
         print(errormsg)
         log.error(errormsg)
         sys.exit(-1)
-
-    """"
-
-    """
