@@ -8,7 +8,8 @@ class Config:
                "float": 1.0,
                "entero": 150,
                "booleano": False,
-               "cadena": ''
+               "cadena": '',
+               "progress_bar_ticks": 20,
             }
 
     def __init__(self, file=None, override_section=None):
