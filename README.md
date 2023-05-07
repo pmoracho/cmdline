@@ -116,14 +116,16 @@ pytest
 Una vez completada la instalación inicial, los primeros cambios para crear un
 nuevo proyecto a partir de este template serían:
 
-1. Modificar `setup.py`:
-    * Datos de la herramienta: `NAME`, `DESCRIPTION`, `URL`, `EMAIL`, `AUTHOR`
+1. Renombrar proyecto y carpeta del módulo `cmdline` por el nombre de la nueva herramienta
+2. Modificar `setup.py`:
+    * Losd imports de: `NAME`, `DESCRIPTION`, `URL`, `EMAIL`, `AUTHOR`, que apunten a la nueva carpeta
     * Paquetes requeridos `REQUIRED`
     * Clasificadores para **PyPy**: `setup(..., classifiers)`
     * `entry_points`, según sea la invocación del código principal del script.
-2. Configuración de versión en `cmdline/__version__.py`
-3. Editar código en `cmdline/core.py`
-4. Renombrar proyecto y carpeta del módulo `cmdline` por el nombre de la nueva herramienta
+3. Configuración de versión en `cmdline/__version__.py`
+4. Editar `cmdline/core.py` y modificar `cmdline` por el nuevo módulo
+5. Editar `cmdline/log.py`y modificar `cmdline` por el nuevo módulo
+6. Editar `cmdline/options.py`y modificar `cmdline` por el nuevo módulo
 5. Eliminar repositorio `.git` y generar una nuevo con `git init`
 
 
