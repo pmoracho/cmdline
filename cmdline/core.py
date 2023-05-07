@@ -52,7 +52,7 @@ def main():
 
     if args.commando not in ["test"]:
 
-        exit(0)
+        sys.exit(0)
 
     if not args.quiet:
         print(title.format(DESCRIPTION, VERSION, AUTHOR, EMAIL))
